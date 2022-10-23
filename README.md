@@ -1,3 +1,9 @@
-# CourseProject
+# Company Perception Tool Using Sentiment Analysis
 
-Please fork this repository and paste the github link of your fork on Microsoft CMT. Detailed instructions are on Coursera under Week 1: Course Project Overview/Week 9 Activities.
+## Team Name - Intelligent Analyzers
+Team Members:
+- Atharv Chandratre - atharvc2@illinois.edu (Captain) 
+- Uday Kanth Reddy Kakarla - uk3@illinois.edu
+- Priyanka Awatramani - pma7@illinois.edu
+- Ansh Bilimoria - amb20@illinois.edu
+
