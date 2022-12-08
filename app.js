@@ -1,4 +1,4 @@
-d3.csv('./code/TextBlobResultswithMedian.csv').then(function (data) {
+d3.dsv('|','./code/TextBlobResultswithMedian.csv').then(function (data) {
 
   var companies = data;
 
