@@ -1,5 +1,4 @@
 d3.csv('./code/TextBlobResultswithMedian.csv').then(function (data) {
-  // console.log(data);
 
   var companies = data;
 
@@ -30,7 +29,6 @@ d3.csv('./code/TextBlobResultswithMedian.csv').then(function (data) {
     var filteredData = companies.filter((companies) =>
       companies.Company.toLowerCase().trim().includes(inputValue)
     );
-    // console.log(filteredData.length)
     if (
       filteredData.length === 0 &&
       inputValue !== 'Something to give no results'
@@ -42,7 +40,6 @@ d3.csv('./code/TextBlobResultswithMedian.csv').then(function (data) {
         );
     }
 
-    //Please add more recommendations
     positive_score_recommendations = [
       'The employees at this company feel they have a good work/life balance.',
       'Great people, supportive leadership, growth opportunities, progressive in values/culture.',
@@ -50,7 +47,6 @@ d3.csv('./code/TextBlobResultswithMedian.csv').then(function (data) {
       'Employees at this company reported to have great pay, flexible working hours and good opportunities for career advancement.',
     ];
 
-    //Please add more recommendations
     negative_score_recommendations = [
       'Stressful work environment with impossible deadlines.',
       'Average pay with no benefits.',
@@ -74,9 +70,6 @@ d3.csv('./code/TextBlobResultswithMedian.csv').then(function (data) {
     output = _.sortBy(filteredData, 'SCORE').reverse();
 
     for (var i = 0; i < filteredData.length; i++) {
-      // console.log(output[i]['original_title'])
-      // console.log(output[i]['avg_vote'])
-      // d3.select("tbody>tr>td").text(output[i]['original_title']);
       d3.select('tbody')
         .insert('tr')
         .html(
@@ -84,11 +77,7 @@ d3.csv('./code/TextBlobResultswithMedian.csv').then(function (data) {
             [i + 1] +
             '</td>' +
             '<td>' +
-            // '<a href=https://www.imdb.com/title/' +
-            // output[i]['imdb_title_id'] +
-            // " target='_blank'>" +
             output[i]['Company'] +
-            // '</a>' +
             '</td>' +
             '<td>' +
             output[i]['SCORE'] +
