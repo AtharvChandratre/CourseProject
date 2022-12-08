@@ -42,27 +42,41 @@ d3.dsv('|','./dataset/TextBlobResultswithMedian.csv').then(function (data) {
 
     positive_score_recommendations = [
       'The employees at this company feel they have a good work/life balance.',
-      'Great people, supportive leadership, growth opportunities, progressive in values/culture.',
-      'Great place to work!',
-      'Employees at this company reported to have great pay, flexible working hours and good opportunities for career advancement.',
+      'Great team bonding, supportive leadership, growth opportunities, progressive in values/culture.',
+      'Your employees find this a great place to work, keep it up!',
+      'Employees at this company reported to have great pay, flexible working hours and good opportunities for career advancement.'
+    ];
+
+    moderate_score_recommendations = [
+      'Employees are struggling in voicing their opinions in some situations. Actively collect and incorporate employee feedback.',
+      'Long time since a team outing has been organised. Consider organising some to increase team motivation.',
+      'Some instances of inter-team dependencies have been observed leading to delays and decrease in employee productivity. Look into fixing those issues.',
     ];
 
     negative_score_recommendations = [
-      'Stressful work environment with impossible deadlines.',
-      'Average pay with no benefits.',
-      'Management lacks leadership with high employee churn.',
+      'Stressful work environment with impossible deadlines. Spend more time in sprint plannings.',
+      'Average pay with no benefits. Provide more incentives to employees for work completion.',
+      'Management lacks leadership leading to high employee churn. Take charge of situations to help get your employees issues resolved.',
+      'Teammates are not sharing knowledge or able to communicate effectively with one another. Organise more team bonding activites.',
+      'Long continuous working hours have been reported. Take your team out for meals, movies, picnics.',
+      'Inter-team disputes have been observed. Take actions to resolve these conflicts in a professional manner.'
     ];
 
     for (var i = 0; i < filteredData.length; i++) {
-      if (filteredData[i]['SENTIMENT_LABEL'] == 'positive') {
-        filteredData[i]['RECOMMENDATION'] =
-          positive_score_recommendations[
-            Math.floor(Math.random() * positive_score_recommendations.length)
-          ];
-      } else {
+      if (filteredData[i]['SCORE'] < 0.3) {
         filteredData[i]['RECOMMENDATION'] =
           negative_score_recommendations[
             Math.floor(Math.random() * negative_score_recommendations.length)
+          ];
+      } else if (filteredData[i]['SCORE'] < 0.4 && filteredData[i]['SCORE'] >= 0.3) {
+        filteredData[i]['RECOMMENDATION'] =
+          moderate_score_recommendations[
+            Math.floor(Math.random() * moderate_score_recommendations.length)
+          ];
+      } else {
+        filteredData[i]['RECOMMENDATION'] =
+          positive_score_recommendations[
+            Math.floor(Math.random() * positive_score_recommendations.length)
           ];
       }
     }
