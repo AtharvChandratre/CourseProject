@@ -11,7 +11,7 @@ Team Members:
 ## Demo Video
 
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=sUQXYb06CcM" target="_blank">
- <img src="http://img.youtube.com/vi/sUQXYb06CcM/mqdefault.jpg" alt="Watch the video" width="640" height="480" border="10" />
+ <img src="./VideoThumbnail.png" alt="Watch the video" width="640" height="480" border="10" />
 </a>
 
 ### Note - Documentation is in the Documentation.pdf file in the root directory.
