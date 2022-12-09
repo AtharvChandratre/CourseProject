@@ -47,12 +47,6 @@ d3.dsv('|','./dataset/TextBlobResultswithMedian.csv').then(function (data) {
       'Employees at this company reported to have great pay, flexible working hours and good opportunities for career advancement.'
     ];
 
-    moderate_score_recommendations = [
-      'Employees are struggling in voicing their opinions in some situations. Actively collect and incorporate employee feedback.',
-      'Long time since a team outing has been organised. Consider organising some to increase team motivation.',
-      'Some instances of inter-team dependencies have been observed leading to delays and decrease in employee productivity. Look into fixing those issues.',
-    ];
-
     negative_score_recommendations = [
       'Stressful work environment with impossible deadlines. Spend more time in sprint plannings.',
       'Average pay with no benefits. Provide more incentives to employees for work completion.',
@@ -63,23 +57,19 @@ d3.dsv('|','./dataset/TextBlobResultswithMedian.csv').then(function (data) {
     ];
 
     for (var i = 0; i < filteredData.length; i++) {
-      if (filteredData[i]['SCORE'] < 0.3) {
-        filteredData[i]['RECOMMENDATION'] =
-          negative_score_recommendations[
-            Math.floor(Math.random() * negative_score_recommendations.length)
-          ];
-      } else if (filteredData[i]['SCORE'] < 0.4 && filteredData[i]['SCORE'] >= 0.3) {
-        filteredData[i]['RECOMMENDATION'] =
-          moderate_score_recommendations[
-            Math.floor(Math.random() * moderate_score_recommendations.length)
-          ];
-      } else {
+      if (filteredData[i]['SENTIMENT_LABEL'] == 'positive') {
         filteredData[i]['RECOMMENDATION'] =
           positive_score_recommendations[
             Math.floor(Math.random() * positive_score_recommendations.length)
           ];
+      } else {
+        filteredData[i]['RECOMMENDATION'] =
+          negative_score_recommendations[
+            Math.floor(Math.random() * negative_score_recommendations.length)
+          ];
       }
     }
+
     console.log(filteredData);
     output = _.sortBy(filteredData, 'SCORE').reverse();
 
