@@ -10,6 +10,10 @@ Team Members:
 
 ## Demo Video
 
+Click on the image below to go to the demo video.
+
+### Note - Documentation is in the Documentation.pdf file in the root directory.
+
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=sUQXYb06CcM" target="_blank">
  <img src="./VideoThumbnail.png" alt="Watch the video" width="1000" height="500" border="10" />
 </a>
