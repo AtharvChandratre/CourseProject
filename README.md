@@ -18,8 +18,6 @@ Click on the image below to go to the demo video.
  <img src="./VideoThumbnail.png" alt="Watch the video" width="1000" height="500" border="10" />
 </a>
 
-### Note - Documentation is in the Documentation.pdf file in the root directory.
-
 ## How to use the code
 Required software:
 - Python 3
