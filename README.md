@@ -10,6 +10,10 @@ Team Members:
 
 ## Demo Video
 
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=sUQXYb06CcM" target="_blank">
+ <img src="http://img.youtube.com/vi/sUQXYb06CcM/mqdefault.jpg" alt="Watch the video" width="240" height="180" border="10" />
+</a>
+
 [![Watch the video](https://img.youtube.com/vi/sUQXYb06CcM/default.jpg)](https://youtu.be/sUQXYb06CcM)
 
 [![a](https://markdown-videos.deta/youtube/sUQXYb06CcM)](https://youtu.be/sUQXYb06CcM)
