@@ -11,14 +11,10 @@ Team Members:
 ## Demo Video
 
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=sUQXYb06CcM" target="_blank">
- <img src="http://img.youtube.com/vi/sUQXYb06CcM/mqdefault.jpg" alt="Watch the video" width="240" height="180" border="10" />
+ <img src="http://img.youtube.com/vi/sUQXYb06CcM/mqdefault.jpg" alt="Watch the video" width="640" height="480" border="10" />
 </a>
 
-[![Watch the video](https://img.youtube.com/vi/sUQXYb06CcM/default.jpg)](https://youtu.be/sUQXYb06CcM)
-
-[![a](https://markdown-videos.deta/youtube/sUQXYb06CcM)](https://youtu.be/sUQXYb06CcM)
-
-Note - Documentation is in the Documentation.pdf file in the root directory.
+### Note - Documentation is in the Documentation.pdf file in the root directory.
 
 ## How to use the code
 Required software:
